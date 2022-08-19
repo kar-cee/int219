@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Tags</title>
+</head>
+<style>
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding:0;
+}
+.grid-container{
+    display: grid;
+    background: rgb(243, 153, 18);
+    margin: 3px;
+    height: 97vh;
+    grid-template-columns: 20% 65% 15%;/*partition of column with thier width*/  
+    grid-template-rows: 18% 64% 18%;
+/*partition of rows*/
+    transition: 3s ease-in-out;
+/*transtion duration for hover effect*/
+}
+.grid-item{
+ background-color: rgb(166, 237, 184);
+margin:5px;
+text-align: center;
+letter-spacing: 1px;
+ padding: 15px;
+ border-radius: 3px;
+ transition:background-color 1s;
+}
+header{
+        grid-column: 2/4; 
+    }          
+nav{
+        grid-row: 1/4;
+  /*row span from line 1 to line4*/
+}
+aside{
+    grid-area: 2/2/3/3 ;
+    /*both row and col span */
+}
+
+article{
+    grid-row: 2/3;
+}
+footer{
+    grid-column: 2/4;
+}
+.grid-item:hover{
+background-color: mediumaquamarine;
+/*to change color once cursor hover */
+transform:scale(1.02);
+}
+</style>
+<body>
+    <div class="grid-container">
+        <header class="grid-item">Header</header>
+        <nav class="grid-item">NavBar</nav>
+        <aside class="grid-item">Aticle</aside>
+        <article class="grid-item">Aside</article>
+        <footer class="grid-item">Footer</footer>
+    </div>
+</body>
+</html>

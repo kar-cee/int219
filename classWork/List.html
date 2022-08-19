@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different list</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        padding:0;
+        margin:0;
+    }
+    section{
+        height: 100vh;
+        padding:30vh 3rem 3rem 3rem;
+        border: #333 3px solid;
+    }
+    #menu{
+        position:sticky;
+        top:0;
+        background-color: cornflowerblue;
+        height: 30vh;
+        padding: 3rem;
+    }
+    h2{
+        text-align: center;
+    }
+    #top{
+        position: fixed;
+        bottom: 1rem;
+        right:1rem;
+    }
+</style>
+<body>
+    <section id="menu">
+        <a href="#oList"><h3>Order List</h3></a>
+        <a href="#uList"><h3>Unordered List</h3></a>
+        <a href="#dList"><h3>Description List</h3></a>
+    </section>
+    <section id="oList">
+        <h2 class="ol" style="color:red">
+            Ordered List
+        </h2>
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ol>
+    </section>
+    <section id="uList">
+        <h2 class="ul">
+            Unordered List
+        </h2>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+    </section>
+    <section id="dList">
+        <h2 class="dl">
+            Description List
+        </h2>
+        <dl>
+            <dt>One</dt>
+            <dd>This is number 1</dd>
+            <dt>Two</dt>
+            <dd>This is number 2</dd>
+            <dt>Three</dt>
+            <dd>This is number 3</dd>
+            <dt>Four</dt>
+            <dd>This is number 4</dd>
+        </dl>
+    </section>
+    <div id="top">
+       <a href="#menu"> Top </a></div>
+</body>
+</html>
